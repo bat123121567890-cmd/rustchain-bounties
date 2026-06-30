@@ -26,12 +26,18 @@ jobs:
 
           # Fix #2: --paginate to handle repos with >100 issues
           # Fix #3: select(has("pull_request") | not) to exclude PRs
-          bounties=$(gh api --paginate "repos/$REPO/issues" \
+          # Fix #4: -X GET — gh api defaults to POST when -f fields are present,
+          #   which was POSTing to /issues (create) -> 422 "title wasn't supplied".
+          # Fix #5: with --paginate, gh applies --jq PER PAGE, producing one array
+          #   per page (25 pages @ 2400+ issues) -> invalid combined JSON for
+          #   --argjson. So fetch raw pages and merge with `jq -s 'add'` once.
+          bounties=$(gh api --paginate -X GET "repos/$REPO/issues" \
             -f state=open \
             -f per_page=100 \
             -f sort=created \
             -f direction=desc \
-            --jq '
+            | jq -s '
+              add |
               map(select(has("pull_request") | not)) |
               map(select(
                 (.title | test("(?i)bounty|BOUNTY")) or
