@@ -53,7 +53,7 @@ jobs:
                 comments: .comments,
                 author: .user.login,
                 labels: [.labels[]?.name | select(test("(?i)bounty|open|major|standard|help wanted|integration|community|easy|documentation|red-team"))],
-                agents_welcome: (.body | test("(?i)agents.?welcome|Agents.?welcome"))
+                agents_welcome: ((.body // "") | test("(?i)agents.?welcome|Agents.?welcome"))
               })
             ')
 
