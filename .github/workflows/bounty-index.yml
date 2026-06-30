@@ -31,7 +31,11 @@ jobs:
           # Fix #5: with --paginate, gh applies --jq PER PAGE, producing one array
           #   per page (25 pages @ 2400+ issues) -> invalid combined JSON for
           #   --argjson. So fetch raw pages and merge with `jq -s 'add'` once.
-          bounties=$(gh api --paginate -X GET "repos/$REPO/issues" \
+          # Fix #6: pipe the bounties array into the wrapper jq instead of
+          #   passing it via --argjson. At 1800+ bounties (~750KB) the command
+          #   line exceeded ARG_MAX ("jq: Argument list too long", exit 126).
+          timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          gh api --paginate -X GET "repos/$REPO/issues" \
             -f state=open \
             -f per_page=100 \
             -f sort=created \
@@ -55,18 +59,13 @@ jobs:
                 labels: [.labels[]?.name | select(test("(?i)bounty|open|major|standard|help wanted|integration|community|easy|documentation|red-team"))],
                 agents_welcome: ((.body // "") | test("(?i)agents.?welcome|Agents.?welcome"))
               })
-            ')
-
-          timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          jq -n \
-            --arg updated "$timestamp" \
-            --argjson bounties "$bounties" \
-            '{
-              updated_at: $updated,
-              repo: "'"$REPO"'",
-              total: ($bounties | length),
-              bounties: $bounties
-            }' > bounties.json
+            ' \
+            | jq --arg updated "$timestamp" --arg repo "$REPO" '{
+                updated_at: $updated,
+                repo: $repo,
+                total: length,
+                bounties: .
+              }' > bounties.json
 
           count=$(jq '.total' bounties.json)
           echo "Generated bounties.json with $count bounties"
