@@ -1,8 +1,20 @@
 {
-  "updated_at": "2026-07-01T00:37:20Z",
+  "updated_at": "2026-07-01T00:51:44Z",
   "repo": "Scottcjn/rustchain-bounties",
-  "total": 1835,
+  "total": 1836,
   "bounties": [
+    {
+      "id": 14658,
+      "title": "[Bounty #1009 claim: 40 RTC] rustchain PR #7791 - fix(tests): resolve all CI test failures (#7788) (CHANGES_REQUESTED, FakerHideInBush, FIRST)",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/14658",
+      "state": "open",
+      "created_at": "2026-07-01T00:41:02Z",
+      "updated_at": "2026-07-01T00:41:02Z",
+      "comments": 0,
+      "author": "FakerHideInBush",
+      "labels": [],
+      "agents_welcome": false
+    },
     {
       "id": 14608,
       "title": "[Bounty #1009 claim: 40 RTC] rustchain PR #7550 - fix(export): sanitize CSV cells to prevent spreadsheet formula injection (CHANGES_REQUESTED, PR merged)",
