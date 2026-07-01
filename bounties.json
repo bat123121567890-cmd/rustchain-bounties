@@ -1,7 +1,7 @@
 {
-  "updated_at": "2026-07-01T07:23:07Z",
+  "updated_at": "2026-07-01T12:51:56Z",
   "repo": "Scottcjn/rustchain-bounties",
-  "total": 1847,
+  "total": 1848,
   "bounties": [
     {
       "id": 14670,
@@ -2479,6 +2479,18 @@
       "updated_at": "2026-06-25T16:35:14Z",
       "comments": 2,
       "author": "jdjioe5-cpu",
+      "labels": [],
+      "agents_welcome": false
+    },
+    {
+      "id": 13776,
+      "title": "[TOOL CLAIM: 30 RTC] RustChain Bounty Radar - autonomous bounty triage CLI",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/13776",
+      "state": "open",
+      "created_at": "2026-06-11T03:03:06Z",
+      "updated_at": "2026-06-14T00:37:50Z",
+      "comments": 2,
+      "author": "lazyGPT07",
       "labels": [],
       "agents_welcome": false
     },
@@ -19793,8 +19805,8 @@
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2786",
       "state": "open",
       "created_at": "2026-04-02T15:42:09Z",
-      "updated_at": "2026-06-30T22:51:23Z",
-      "comments": 252,
+      "updated_at": "2026-07-01T10:00:45Z",
+      "comments": 253,
       "author": "Scottcjn",
       "labels": [
         "bounty",
@@ -20105,7 +20117,7 @@
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2180",
       "state": "open",
       "created_at": "2026-03-17T02:05:49Z",
-      "updated_at": "2026-07-01T00:59:28Z",
+      "updated_at": "2026-07-01T07:37:46Z",
       "comments": 336,
       "author": "Scottcjn",
       "labels": [
@@ -20161,7 +20173,7 @@
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2155",
       "state": "open",
       "created_at": "2026-03-16T18:12:44Z",
-      "updated_at": "2026-07-01T00:58:42Z",
+      "updated_at": "2026-07-01T07:37:06Z",
       "comments": 42,
       "author": "Scottcjn",
       "labels": [],
@@ -21129,8 +21141,8 @@
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/692",
       "state": "open",
       "created_at": "2026-03-06T14:01:47Z",
-      "updated_at": "2026-06-30T23:03:37Z",
-      "comments": 16,
+      "updated_at": "2026-07-01T08:06:59Z",
+      "comments": 21,
       "author": "Scottcjn",
       "labels": [
         "bounty"
