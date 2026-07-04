@@ -1,8 +1,44 @@
 {
-  "updated_at": "2026-07-03T21:37:31Z",
+  "updated_at": "2026-07-04T01:48:19Z",
   "repo": "Scottcjn/rustchain-bounties",
-  "total": 1857,
+  "total": 1860,
   "bounties": [
+    {
+      "id": 14733,
+      "title": "[Bounty #2784 claim] ONBOARD: Star + Test Miner + Hardware Report",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/14733",
+      "state": "open",
+      "created_at": "2026-07-04T00:20:37Z",
+      "updated_at": "2026-07-04T01:38:15Z",
+      "comments": 6,
+      "author": "jaxint",
+      "labels": [],
+      "agents_welcome": false
+    },
+    {
+      "id": 14732,
+      "title": "[Bounty #2786 claim] ONBOARD: Star + Compare RustChain to Bitcoin",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/14732",
+      "state": "open",
+      "created_at": "2026-07-04T00:18:37Z",
+      "updated_at": "2026-07-04T00:18:37Z",
+      "comments": 0,
+      "author": "jaxint",
+      "labels": [],
+      "agents_welcome": false
+    },
+    {
+      "id": 14731,
+      "title": "[Bounty #2782 claim] ONBOARD: Star + Review",
+      "url": "https://github.com/Scottcjn/rustchain-bounties/issues/14731",
+      "state": "open",
+      "created_at": "2026-07-04T00:18:35Z",
+      "updated_at": "2026-07-04T00:18:35Z",
+      "comments": 0,
+      "author": "jaxint",
+      "labels": [],
+      "agents_welcome": false
+    },
     {
       "id": 14717,
       "title": "[Bounty #1009 claim: 40 RTC] bounty-concierge PR #42 - checkout v7 workflow pinning risk (CHANGES_REQUESTED, FakerHideInBush, FIRST)",
@@ -19731,8 +19767,8 @@
       "url": "https://github.com/Scottcjn/rustchain-bounties/issues/2890",
       "state": "open",
       "created_at": "2026-04-09T14:57:05Z",
-      "updated_at": "2026-06-28T12:22:59Z",
-      "comments": 49,
+      "updated_at": "2026-07-04T00:19:02Z",
+      "comments": 62,
       "author": "Scottcjn",
       "labels": [
         "help wanted",
